@@ -4,6 +4,7 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
+import Tooltip from '@mui/material/Tooltip';
 import { Link } from "react-router-dom";
 
 const MovieCard = ({movie}) => {
@@ -29,19 +30,21 @@ const MovieCard = ({movie}) => {
             image={movie.posterUrl}
           />
           <CardContent sx={{ padding: '10px 5px !important', backgroundColor: '#1a191f' }}>
-            <Typography
-              variant="subtitle1"
-              component="div"
-              sx={{
-                color: '#fff',
-                textDecoration: 'none',
-                whiteSpace: 'nowrap',
-                overflow: 'hidden',
-                textOverflow: 'ellipsis',
-              }}
-            >
-              {movie.nameRu}
-            </Typography>
+            <Tooltip title={movie.nameRu}>
+              <Typography
+                variant="subtitle1"
+                component="div"
+                sx={{
+                  color: '#fff',
+                  textDecoration: 'none',
+                  whiteSpace: 'nowrap',
+                  overflow: 'hidden',
+                  textOverflow: 'ellipsis',
+                }}
+              >
+                {movie.nameRu}
+              </Typography>
+            </Tooltip>
             <Typography variant="subtitle2" color="yellow">
               {genres[1] ? `${genres[0]}, ${genres[1]}` : `${genres[0]}`}
             </Typography>
