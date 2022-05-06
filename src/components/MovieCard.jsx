@@ -6,10 +6,12 @@ import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 import { Link } from "react-router-dom";
 
-const MovieCard = () => {
+const MovieCard = ({movie}) => {
+  const genres = movie.genres.map(item => item.genre);
+
   return (
     <Grid item>
-      <Link style={{ textDecoration: 'none' }} to="/movies/1">
+      <Link style={{ textDecoration: 'none' }} to={`/movies/${movie.filmId}`}>
         <Card
           sx={{
             maxWidth: 240,
@@ -24,14 +26,14 @@ const MovieCard = () => {
             sx={{
               width: 240,
             }}
-            image="https://kinopoiskapiunofficial.tech/images/posters/kp_small/435.jpg"
+            image={movie.posterUrl}
           />
           <CardContent sx={{ padding: '10px 5px !important', backgroundColor: '#1a191f' }}>
             <Typography variant="subtitle1" component="div" sx={{ color: '#fff', textDecoration: 'none' }}>
-              Постучись в мою дверь
+              {movie.nameRu}
             </Typography>
             <Typography variant="subtitle2" color="yellow">
-              мелодрама, комедия
+              {genres[1] ? `${genres[0]}, ${genres[1]}` : `${genres[0]}`}
             </Typography>
           </CardContent>
         </Card>
