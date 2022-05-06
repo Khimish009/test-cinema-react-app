@@ -1,7 +1,10 @@
+import { useParams } from "react-router-dom";
 import Typography from '@mui/material/Typography';
 
 const Movie = () => {
-  return <Typography sx={{color: '#fff'}}>Movie</Typography>
+  const { id } = useParams();
+
+  return <Typography sx={{color: '#fff'}}>Movie {id}</Typography>
 }
 
 export default Movie;
