@@ -26,7 +26,7 @@ const MovieCard = () => {
       />
       <CardContent sx={{ padding: '10px 5px !important', backgroundColor: '#1a191f' }}>
         <Typography variant="subtitle1" component="div" sx={{ color: '#fff' }}>
-          Lizard
+          Постучись в мою дверь
         </Typography>
         <Typography variant="subtitle2" color="yellow">
           мелодрама, комедия

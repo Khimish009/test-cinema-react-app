@@ -1,5 +1,5 @@
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import Movies from "./components/Movies";
+import Main from "./components/Main";
 
 const theme = createTheme({
   yellow: {
@@ -10,7 +10,7 @@ const theme = createTheme({
 export default function App() {
   return (
     <ThemeProvider theme={theme}>
-      <Movies />
+      <Main />
     </ThemeProvider>
   );
 }
