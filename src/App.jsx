@@ -5,11 +5,6 @@ const theme = createTheme({
   yellow: {
     main: '#ffd80e',
   },
-  palette: {
-    yellow1: {
-      main: '#ffd80e',
-    },
-  },
 });
 
 export default function App() {

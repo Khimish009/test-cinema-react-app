@@ -8,7 +8,14 @@ import Grid from '@mui/material/Grid';
 const MovieCard = () => {
   return (
     <Grid item>
-      <Card sx={{ maxWidth: 240 }}>
+      <Card
+        sx={{
+          maxWidth: 240,
+          boxShadow: `8px 7px 5px -1px rgb(0 0 0 / 40%),
+          0px 1px 1px 0px rgb(0 0 0 / 11%),
+          -6px -1px 3px 0px rgb(0 0 0 / 14%)`
+        }}
+      >
       <CardMedia
         component="img"
         alt="green iguana"
