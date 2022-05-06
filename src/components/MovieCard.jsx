@@ -17,9 +17,12 @@ const MovieCard = () => {
         }}
         image="https://kinopoiskapiunofficial.tech/images/posters/kp_small/435.jpg"
       />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
+      <CardContent sx={{ padding: '10px 5px !important', backgroundColor: '#1a191f' }}>
+        <Typography variant="subtitle1" component="div" sx={{ color: '#fff' }}>
           Lizard
+        </Typography>
+        <Typography variant="subtitle2" color="yellow">
+          мелодрама, комедия
         </Typography>
       </CardContent>
     </Card>
