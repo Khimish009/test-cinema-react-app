@@ -29,7 +29,17 @@ const MovieCard = ({movie}) => {
             image={movie.posterUrl}
           />
           <CardContent sx={{ padding: '10px 5px !important', backgroundColor: '#1a191f' }}>
-            <Typography variant="subtitle1" component="div" sx={{ color: '#fff', textDecoration: 'none' }}>
+            <Typography
+              variant="subtitle1"
+              component="div"
+              sx={{
+                color: '#fff',
+                textDecoration: 'none',
+                whiteSpace: 'nowrap',
+                overflow: 'hidden',
+                textOverflow: 'ellipsis',
+              }}
+            >
               {movie.nameRu}
             </Typography>
             <Typography variant="subtitle2" color="yellow">
