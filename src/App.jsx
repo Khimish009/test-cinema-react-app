@@ -9,7 +9,7 @@ const theme = createTheme({
   },
   palette: {
     warning: {
-      main: '#e65100'
+      main: '#ff9800'
     }
   }
 });

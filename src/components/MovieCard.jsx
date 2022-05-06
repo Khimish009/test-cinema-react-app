@@ -19,17 +19,19 @@ const MovieCard = ({movie}) => {
             boxShadow: `8px 7px 5px -1px rgb(0 0 0 / 40%),
             0px 1px 1px 0px rgb(0 0 0 / 11%),
             -6px -1px 3px 0px rgb(0 0 0 / 14%)`,
+            height: '100%',
+            backgroundColor: '#1a191f',
           }}
         >
           <CardMedia
             component="img"
-            alt="green iguana"
+            alt="movie poster"
             sx={{
               width: 240,
             }}
             image={movie.posterUrl}
           />
-          <CardContent sx={{ padding: '10px 5px !important', backgroundColor: '#1a191f' }}>
+          <CardContent sx={{ padding: '10px 5px !important'}}>
             <Tooltip title={movie.nameRu}>
               <Typography
                 variant="subtitle1"

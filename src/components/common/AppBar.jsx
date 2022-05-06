@@ -11,12 +11,20 @@ const DenseAppBar = () => {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static" color="warning">
         <Toolbar variant="dense" sx={{ justifyContent: 'space-between' }}>
-          <Typography variant="h6" color="inherit" component="div">
+          <Typography variant="h6" sx={{ color: '#fff' }} component="div">
             Movie App
           </Typography>
           <Box>
-            <Button sx={{ margin: '0 10px' }} variant="contained"><Link to="/">Movies</Link></Button>
-            <Button variant="contained"><Link to="/table">Table</Link></Button>
+            <Link style={{ textDecoration: 'none' }} to="/">
+              <Button sx={{ margin: '0 10px' }} variant="contained">
+                Movies
+              </Button>
+            </Link>
+            <Link style={{ textDecoration: 'none' }} to="/table">
+              <Button variant="contained">
+                Table
+              </Button>
+            </Link>
           </Box>
         </Toolbar>
       </AppBar>
